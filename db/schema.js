@@ -11,8 +11,8 @@ const UserSession = new mongoose.Schema({
 })
 
 const Appointment = new mongoose.Schema({
-    start: {type: Date},
-    end: {type: Date},
+    start: {type: Number},
+    end: {type: Number},
     user_name: {type: String},
     reason: {type:String}
 })

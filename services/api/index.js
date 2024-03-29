@@ -13,8 +13,8 @@ async function addAppointmentt(req,res){
             reason
         } = req.body
         let obj = {
-            start: Date(start),
-            end: Date(end),
+            start: new Date(start).getTime(),
+            end: new Date(end).getTime(),
             reason,
             user_name: req.user_name
         }
