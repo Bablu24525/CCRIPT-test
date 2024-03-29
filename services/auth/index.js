@@ -41,8 +41,6 @@ async function logIn(req,res){
             user_name: user_name,
             password: md5(password.toString()),
         })
-        console.log(user_name)
-        console.log(response)
         if(response && response._id){
             let hash = md5(new Date() + Math.random());
             let access_token = jwt.sign({ session_hash: hash }, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1m'});
